@@ -3,6 +3,14 @@
     padding: 0;
 }
 
+h2, a, p {
+    font-family: Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
 .container {
     display: flex;
     flex-direction: row;
@@ -10,6 +18,11 @@
     align-items: center;
     max-width: 990px;
     margin: auto;
+}
+
+.border {
+    border-radius: 14px;
+    background-color: rgb(245, 248, 250);
 }
 
 header {
@@ -62,4 +75,69 @@ header .settings {
 
 header .settings:hover {
     background-color: rgb(232, 245, 254);
+}
+
+.more {
+    width: 350px;
+}
+
+.more .media {
+    margin-top: 10px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.more .suggestions {
+    margin-top: 10px;
+}
+
+.more .suggestions h2 {
+    padding: 10px 15px;
+}
+
+.more .suggestions .profile {
+    border-top: 1px solid rgb(230, 236, 240);
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.more .suggestions .profile .avatar {
+    border-radius: 50px;
+}
+
+.more .suggestions .profile .user {
+    flex-grow: 1;
+}
+
+.more .suggestions .profile .user a {
+    display: block;
+    margin-left: 10px;
+}
+
+.more .suggestions .profile .user .fullname {
+    color: black;
+    font-size: 15px;
+}
+
+.more .suggestions .profile .user .account {
+    color: #657786;
+    font-size: 15px;
+}
+
+.more .suggestions .profile .follow {
+    padding: 5px 15px;
+    border: 1px solid rgb(29, 161, 242);
+    border-radius: 40px;
+    color: rgb(29, 161, 242);
+    font-weight: bold;
+}
+
+.more .suggestions .show-more {
+    display: block;
+    padding: 10px 15px;
+    border-top: 1px solid rgb(230, 236, 240);
+    color: rgb(29, 161, 242);
 }
