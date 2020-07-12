@@ -20,10 +20,24 @@ a {
     margin: auto;
 }
 
+.container.align-top {
+    align-items: flex-start;
+}
+
 .border {
     border-radius: 14px;
     background-color: rgb(245, 248, 250);
 }
+
+.follow {
+    padding: 5px 15px;
+    border: 1px solid rgb(29, 161, 242);
+    border-radius: 40px;
+    color: rgb(29, 161, 242);
+    font-weight: bold;
+}
+
+/*HEADER*/
 
 header {
     border-bottom: 1px solid rgb(204, 214, 221);
@@ -77,6 +91,46 @@ header .settings:hover {
     background-color: rgb(232, 245, 254);
 }
 
+/*HEADER*/
+
+/*FEED*/
+
+.feed {
+  border-left: 1px solid rgb(204, 214, 221);
+  border-right: 1px solid rgb(204, 214, 221);
+  max-width: 600px; 
+}
+
+.feed .profile {
+    border-radius: 134px;
+    border: 4px solid white;
+    position: relative;
+    left: 10px;
+    bottom: 74px;
+    z-index: 1;
+}
+
+.feed .bio {
+    position: relative;
+    bottom: 150px;
+    padding: 10px 15px 15px;
+}
+
+.feed .bio .follow-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.feed .bio .follow-btn .follow{
+    padding: 10px 15px;
+}
+
+/*FEED*/
+
+/*MORE*/
+
 .more {
     width: 350px;
 }
@@ -120,19 +174,12 @@ header .settings:hover {
 .more .suggestions .profile .user .fullname {
     color: black;
     font-size: 15px;
+    font-weight: bold;
 }
 
 .more .suggestions .profile .user .account {
     color: #657786;
     font-size: 15px;
-}
-
-.more .suggestions .profile .follow {
-    padding: 5px 15px;
-    border: 1px solid rgb(29, 161, 242);
-    border-radius: 40px;
-    color: rgb(29, 161, 242);
-    font-weight: bold;
 }
 
 .more .suggestions .show-more {
@@ -141,3 +188,25 @@ header .settings:hover {
     border-top: 1px solid rgb(230, 236, 240);
     color: rgb(29, 161, 242);
 }
+
+.more .links {
+    margin-top: 20px;
+}
+
+.more .links a {
+    font-size: 13px;
+    color: #657786;
+    padding-right: 10px;
+}
+
+.more .links a:hover {
+    text-decoration: underline;
+}
+
+.more .copyright p {
+    color: #657786;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/*MORE*/
