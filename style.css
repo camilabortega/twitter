@@ -3,8 +3,8 @@
     padding: 0;
 }
 
-h2, a, p {
-    font-family: Helvetica, sans-serif;
+h2, a, p, h3 {
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -125,6 +125,68 @@ header .settings:hover {
 
 .feed .bio .follow-btn .follow{
     padding: 10px 15px;
+}
+
+.feed .bio h3 {
+    margin-top: 20px;   
+}
+
+.feed .bio .account {
+    color: #657786;
+    font-size: 15px;
+}
+
+.feed .bio .description {
+    margin: 10px 0;
+}
+
+.feed .bio .info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+.feed .bio .info p, 
+.feed .bio .joined {
+    margin-right: 10px;
+    color: #657786;
+    font-size: 15px;
+}
+
+.feed .bio .followers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.feed .bio .followers p:first-child {
+    margin-right: 20px;
+}
+
+.feed .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.feed .menu a {
+    text-align: center;
+    flex-grow: 1;
+    padding: 15px;
+    color: #657786;
+}
+
+.feed .menu a.active {
+    color: rgb(29, 161, 242);
+    border-bottom: 2px solid rgb(29, 161, 242);
+}
+
+.feed .menu a:hover {
+    background-color: rgb(232, 245, 254);
+    color: rgb(29, 161, 242);
 }
 
 /*FEED*/
