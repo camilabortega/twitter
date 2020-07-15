@@ -105,14 +105,14 @@ header .settings:hover {
     border-radius: 134px;
     border: 4px solid white;
     position: relative;
-    left: 10px;
-    bottom: 74px;
-    z-index: 1;
+    display: block;
+    margin-left: 10px;
+    margin-top: -80px;
 }
 
 .feed .bio {
-    position: relative;
-    bottom: 150px;
+    display: block;
+    margin-top: -65px;
     padding: 10px 15px 15px;
 }
 
@@ -187,6 +187,63 @@ header .settings:hover {
 .feed .menu a:hover {
     background-color: rgb(232, 245, 254);
     color: rgb(29, 161, 242);
+}
+
+.feed .tweets .tweet {
+    border-top: 1px solid rgb(204, 214, 221);
+    border-bottom: 1px solid rgb(204, 214, 221);
+}
+
+.feed .tweets .tweet .body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 15px 0;
+}
+
+.feed .tweets .tweet .body .avatar {
+    margin-right: 10px;
+}
+
+.feed .tweets .tweet .body .avatar img {
+    border-radius: 50px;
+}
+
+.feed .tweets .tweet .body .content .tweet-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.feed .tweets .tweet .body .content .tweet-header p {
+    font-size: 15px;
+    color: #657786;
+}
+
+.feed .tweets .tweet .body .content .tweet-header p a {
+    color: black;
+}
+.feed .tweets .tweet .body .content .tweet-header p a:hover {
+    text-decoration: underline;
+}
+
+.feed .tweets .tweet .body .content .tweet-header p img {
+    margin-right: 5px;
+}
+
+.feed .tweets .tweet .body .content .tweet-text a {
+    color: rgb(29, 161, 242);
+}
+.feed .tweets .tweet .body .content .tweet-text a:hover {
+    text-decoration: underline;
+}
+
+.feed .tweets .tweet .body .content .media {
+    margin-top: 10px;
+    border-radius: 20px;
 }
 
 /*FEED*/
