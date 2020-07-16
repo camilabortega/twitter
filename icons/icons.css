@@ -1,0 +1,89 @@
+.logo {
+  width: 25px;
+  background-color: #1da1f2ed;
+  -webkit-mask: url("logo.svg") no-repeat center;
+  mask: url("logo.svg") no-repeat center;
+}
+
+.reactions a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #657786;
+}
+
+.reactions a span i {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: #657786;
+  padding: 10px;
+}
+
+.reactions a.replies:hover {
+  color: #1da1f2ed;
+}
+
+.reactions a.replies span.icon:hover {
+  background: rgb(232, 245, 254);
+  border-radius: 18px;
+}
+
+.reactions a.replies span i {
+  -webkit-mask: url("replies.svg") no-repeat center;
+  mask: url("replies.svg") no-repeat center;
+}
+.reactions a.replies span i:hover {
+  background: #1da1f2ed;
+}
+
+.reactions a.retweets:hover {
+  color: rgb(85, 207, 142);
+}
+
+.reactions a.retweets span.icon:hover {
+  background: rgb(222, 242, 235);
+  border-radius: 18px;
+}
+
+.reactions a.retweets span i {
+  -webkit-mask: url("retweets.svg") no-repeat center;
+  mask: url("retweets.svg") no-repeat center;
+}
+.reactions a.retweets span i:hover {
+  background: rgb(85, 207, 142);
+}
+
+.reactions a.likes:hover {
+  color: rgb(224, 36, 94);
+}
+
+.reactions a.likes span.icon:hover {
+  background: rgb(243, 227, 235);
+  border-radius: 18px;
+}
+
+.reactions a.likes span i {
+  -webkit-mask: url("likes.svg") no-repeat center;
+  mask: url("likes.svg") no-repeat center;
+}
+.reactions a.likes span i:hover {
+  background: rgb(224, 36, 94);
+}
+
+.reactions a.options:hover {
+  color: #1da1f2ed;
+}
+
+.reactions a.options span.icon:hover {
+  background: rgb(232, 245, 254);
+  border-radius: 18px;
+}
+
+.reactions a.options span i {
+  -webkit-mask: url("options.svg") no-repeat center;
+  mask: url("options.svg") no-repeat center;
+}
+.reactions a.options span i:hover {
+  background: #1da1f2ed;
+}
