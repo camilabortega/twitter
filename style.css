@@ -11,6 +11,26 @@ a {
     text-decoration: none;
 }
 
+.loading {
+    position: absolute;
+    z-index: 2;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.loading img {
+    width: 50px;
+}
+
+.hidden {
+    display: none !important;
+}
+
 .container {
     display: flex;
     flex-direction: row;
@@ -105,19 +125,25 @@ header .settings:hover {
   max-width: 600px; 
 }
 
+.feed .cover {
+    width: 100%;
+}
+
 .feed .profile {
     border-radius: 134px;
     border: 4px solid white;
     position: relative;
     display: block;
     margin-left: 10px;
-    margin-top: -80px;
+    margin-top: -32px;
 }
 
 .feed .bio {
     display: block;
     margin-top: -65px;
     padding: 10px 15px 15px;
+    position: relative;
+    z-index: 1;
 }
 
 .feed .bio .follow-btn {
@@ -125,6 +151,8 @@ header .settings:hover {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+    position: relative;
+    top: 35px;
 }
 
 .feed .bio .follow-btn .follow{

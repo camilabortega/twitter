@@ -9,8 +9,12 @@
     <link rel="stylesheet" href="icons/icons.css">
 </head>
 <body>
+
+    <div class="loading">
+        <img src="icons/logo.svg" alt="Twitter">
+    </div>
     
-    <header>
+    <header class="hidden">
         <div class="container">
             <a href="#">
                 <img src="icons/logo.svg" alt="Twitter">
@@ -25,41 +29,12 @@
         </div>
     </header>
 
-    <div class="container align-top">
+    <div class="container align-top hidden">
         <div class="feed">
-            <img src="https://via.placeholder.com/600x200" alt="Cover">
+            <img src="https://via.placeholder.com/600x200" alt="Cover" class="cover">
             <img src="https://via.placeholder.com/134" alt="Profile" class="profile">
 
-            <div class="bio">
-                <div class="follow-btn">
-                    <a href="#" class="follow">Follow</a>
-                </div>
-                <h3>New Orleans Saints <img src="icons/verified.svg" alt="Verify"></h3>
-                <p class="account">@Saints</p>
-                <p class="description">The official Twitter account of the New Orleans Saints</p>
-                <div class="info">
-                    <p class="local">
-                        <img src="icons/local.svg" alt="Local">
-                        New Orleans, LA
-                    </p>
-                    <p class="link">
-                        <img src="icons/link.svg" alt="Link">
-                        <a href="https://neworleanssaints.com" target="_blank">neworleanssaints.com</a>
-                    </p>
-                    <p class="born">
-                        <img src="icons/born.svg" alt="Born">
-                        Born November 1
-                    </p>
-                </div>
-                <p class="joined">
-                    <img src="icons/joined.svg" alt="Joined">
-                    Joined April 2009
-                </p>
-                <div class="followers">
-                    <p><strong>1,000</strong> Following</p>
-                    <p><strong>1.5M</strong> Followers</p>
-                </div>
-            </div>
+            <div class="bio"></div>
 
             <div class="menu">
                 <a href="#" class="active"><strong>Tweets</strong></a>
@@ -176,6 +151,9 @@
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="timeline.js"></script>
 
 </body>
 </html>
