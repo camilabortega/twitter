@@ -7,6 +7,7 @@ setTimeout(function () {
         .then(function (response) {
             var data = response.data;
             bio(data.user);
+            tweets(data.tweets, data.user.info);
             showFeed();
         })
         .catch(function (error) {
@@ -68,4 +69,62 @@ function bio(user) {
     profile.src = info.profile_image;
 
     document.querySelector(".bio").innerHTML = template;
+}
+
+function tweets(tweets, user) {
+    var divTweets = document.querySelector(".tweets");
+    var template  = "";
+
+    for(tweet of tweets){
+
+        var date  = new Date(tweet.created_at);
+        var media = tweet.media ? tweet.media : false;
+
+        var allMedia = "";        
+        if(media){
+            for(img of media){
+                allMedia += `<img class="media" src="${img}" alt="Media">`;
+            }
+        }
+
+        template += `
+            <div class="tweet">
+            <div class="body">
+                <div class="avatar"><img src="${user.profile_image}" alt="Avatar"></div>
+                <div class="content">
+                    <div class="tweet-header">
+                        <p>
+                            <a href="#"><strong>${user.name}</strong></a>
+                            ${user.verified ? '<img src="icons/verified.svg" alt="Verify">' : ''}
+                            @${user.screen_name} · ${date.toLocaleDateString()}
+                        </p>
+                        <img src="icons/embed.svg" alt="More">
+                    </div>
+                    <p class="tweet-text">${tweet.full_text}</p>
+                    ${allMedia !== "" ? allMedia : ""}
+
+                    <div class="reactions">
+                        <a class="replies"  href="#">
+                            <span class="icon"><i></i></span>
+                            <span class="num">${tweet.reply_count}</span>
+                        </a>
+                        <a class="retweets" href="#">
+                            <span class="icon"><i></i></span>
+                            <span class="num">${tweet.retweet_count}</span>
+                        </a>
+                        <a class="likes"    href="#">
+                            <span class="icon"><i></i></span>
+                            <span class="num">${tweet.favorite_count}</span>
+                        </a>
+                        <a class="options"  href="#">
+                            <span class="icon"><i></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        `;
+    }
+
+    divTweets.innerHTML = template;
 }

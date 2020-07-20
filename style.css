@@ -142,8 +142,6 @@ header .settings:hover {
     display: block;
     margin-top: -65px;
     padding: 10px 15px 15px;
-    position: relative;
-    z-index: 1;
 }
 
 .feed .bio .follow-btn {
