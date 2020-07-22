@@ -83,7 +83,7 @@ function tweets(tweets, user) {
         var allMedia = "";        
         if(media){
             for(img of media){
-                allMedia += `<img class="media" src="${img}" alt="Media">`;
+                allMedia += `<div class="media" style="background-image:url(${img})"></div>`;
             }
         }
 
@@ -101,7 +101,7 @@ function tweets(tweets, user) {
                         <img src="icons/embed.svg" alt="More">
                     </div>
                     <p class="tweet-text">${tweet.full_text}</p>
-                    ${allMedia !== "" ? allMedia : ""}
+                    ${allMedia !== "" ? `<div class="all-media">${allMedia}</div>` : ""}
 
                     <div class="reactions">
                         <a class="replies"  href="#">

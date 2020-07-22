@@ -71,12 +71,25 @@ header .container {
     height: 54px;
 }
 
+@media screen and (max-width: 999px) {
+    header .logo {
+        margin-left: 16px;
+    }
+}
+
 header .search {
     display: flex;
     align-items: center;
     background: #e6ecf0;
     border-radius: 50px;
     flex-grow: .5;
+}
+
+@media screen and (max-width: 320px) {
+    header .search {
+        flex-grow: unset;
+        width: 200px;
+    }
 }
 
 header .search.active {
@@ -115,6 +128,12 @@ header .settings:hover {
     background-color: rgb(232, 245, 254);
 }
 
+@media screen and (max-width: 999px) {
+    header .settings {
+        margin-right: 16px;
+    }
+}
+
 /*HEADER*/
 
 /*FEED*/
@@ -123,6 +142,11 @@ header .settings:hover {
   border-left: 1px solid rgb(204, 214, 221);
   border-right: 1px solid rgb(204, 214, 221);
   max-width: 600px; 
+}
+@media screen and (max-width: 999px) {
+    .feed {
+        max-width: 100%;
+    }
 }
 
 .feed .cover {
@@ -206,6 +230,7 @@ header .settings:hover {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid rgb(204, 214, 221);
 }
 
 .feed .menu a {
@@ -226,7 +251,6 @@ header .settings:hover {
 }
 
 .feed .tweets .tweet {
-    border-top: 1px solid rgb(204, 214, 221);
     border-bottom: 1px solid rgb(204, 214, 221);
 }
 
@@ -254,6 +278,12 @@ header .settings:hover {
     margin-bottom: 5px;
 }
 
+@media screen and (max-width: 999px) {
+    .feed .tweets .tweet .body .content {
+        flex-grow: 1;
+    }
+}
+
 .feed .tweets .tweet .body .content .tweet-header p {
     font-size: 15px;
     color: #657786;
@@ -277,9 +307,22 @@ header .settings:hover {
     text-decoration: underline;
 }
 
+.feed .tweets .tweet .body .content .all-media {
+    width: 100%;
+    height: 285px;
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+}
+
 .feed .tweets .tweet .body .content .media {
+    display: block;
+    width: 100%;
+    height: 100%;
     margin-top: 10px;
     border-radius: 20px;
+    background-position: center center;
+    background-size: cover;
 }
 
 .feed .tweets .tweet .body .content .reactions {
@@ -297,6 +340,13 @@ header .settings:hover {
 
 .more {
     width: 350px;
+    position: sticky;
+    top: 55px;
+}
+@media screen and (max-width: 999px) {
+    .more{
+        display: none;
+    }
 }
 
 .more .media {
