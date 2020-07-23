@@ -65,7 +65,7 @@ function bio(user) {
     var cover   = document.querySelector(".feed .cover");
     var profile = document.querySelector(".feed .profile");
     
-    cover.src = info.profile_banner;
+    cover.style.backgroundImage = `url(${info.profile_banner})`;
     profile.src = info.profile_image;
 
     document.querySelector(".bio").innerHTML = template;
